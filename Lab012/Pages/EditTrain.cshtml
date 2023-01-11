@@ -1,0 +1,20 @@
+﻿@page
+@model Lab012.Pages.EditTrainModel
+<h2>Редактирование поезда</h2>
+
+<form method="post">
+    <input name="id" value="@Model.Train0?.Id" type="hidden" />
+    <p>
+        <label>Number:</label><br />
+        <input name="Number" value="@Model.Train0?.Number" />
+    </p>
+    <p>
+        <label>Railcars:</label><br />
+        <input name="Railcars" value="@Model.Train0?.Railcars" type="number" />
+    </p>
+    <p>
+        <label>TrainType:</label><br />
+        <input name="TrainType" value="@Model.Train0?.TrainType" />
+    </p>
+    <input type="submit" value="Сохранить" />
+</form>

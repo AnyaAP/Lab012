@@ -1,0 +1,16 @@
+﻿@page
+@model Lab012.Pages.EditPassengerModel
+<h2>Редактирование пассажира</h2>
+
+<form method="post">
+    <input name="id" value="@Model.Passenger0?.Id" type="hidden" />
+    <p>
+        <label>PassName:</label><br />
+        <input name="Passname" value="@Model.Passenger0?.PassName" />
+    </p>
+    <p>
+        <label>Passport:</label><br />
+        <input name="Passport" value="@Model.Passenger0?.Passport" type="number" />
+    </p>
+    <input type="submit" value="Сохранить" />
+</form>

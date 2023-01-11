@@ -1,0 +1,16 @@
+﻿@page
+@model Lab012.Pages.CreatePassengerModel
+<h2>Добавление нового пассажира</h2>
+<form method="post">
+    <input name="Id" value="@Model.Passenger0?.Id" type="hidden" />
+    <p>
+    <p>
+        <label>PassName:</label><br />
+        <input name="Passname" />
+    </p>
+    <p>
+        <label>Passport:</label><br />
+        <input name="Passport" type="number" />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>

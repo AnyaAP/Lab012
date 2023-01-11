@@ -1,0 +1,20 @@
+﻿@page
+@model Lab012.Pages.CreateTrainModel
+<h2>Добавление нового поезда</h2>
+<form method="post">
+    <input name="Id" value="@Model.Train0?.Id" type="hidden" />
+    <p>
+    <p>
+        <label>Number:</label><br />
+        <input name="Number" />
+    </p>
+    <p>
+        <label>Railcars:</label><br />
+        <input name="Railcars" type="number" />
+    </p>
+    <p>
+        <label>TrainType:</label><br />
+        <input name="TrainType" />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>

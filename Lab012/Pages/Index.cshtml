@@ -1,0 +1,65 @@
+﻿@page
+@model Lab012.Pages.IndexModel
+<h2>Список поездов</h2>
+<p><a href="/CreateTrain">Добавить поезд</a></p>
+<table>
+    <tr><th>Number</th><th>Railcars</th><th>TrainType</th></tr>
+    @foreach (var train in Model.Trains)
+    {
+        <tr>
+            <td>@train.Number</td><td>@train.Railcars</td><td>@train.TrainType</td>
+            <td>
+                <form method="post">
+                    <a asp-page="EditTrain" asp-route-id="@train.Id">Изменить</a>
+                    <button type="submit" asp-page-handler="deletetrain" asp-route-id="@train.Id">
+                        Удалить
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<h2>Список пассажиов</h2>
+<p><a href="/CreatePassenger">Добавить пассажира</a></p>
+<table>
+    <tr><th>PassName</th><th>Passport</th></tr>
+    @foreach (var passenger in Model.Passengers)
+    {
+        <tr>
+            <td>@passenger.PassName</td><td>@passenger.Passport</td>
+            <td>
+                <form method="post">
+                    <a asp-page="EditPassenger" asp-route-id="@passenger.Id">Изменить</a>
+                    <button type="submit" asp-page-handler="deletepassenger" asp-route-id="@passenger.Id">
+                        Удалить
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+<h2>Список билетов</h2>
+<p><a href="/CreateTicket">Добавить билет</a></p>
+<table>
+    <tr><th>PassId</th><th>TrainId</th>
+        <th>Railcar</th><th>Seat</th>
+        <th>StartPlace</th><th>FinalPlace</th>
+        <th>StartDate</th><th>FinalDate</th>
+    </tr>
+    @foreach (var ticket in Model.Tickets)
+    {
+        <tr><td>@ticket.PassId</td><td>@ticket.TrainId</td>
+            <td>@ticket.Railcar</td><td>@ticket.Seat</td>
+            <td>@ticket.StartPlace</td><td>@ticket.FinalPlace</td>
+            <td>@ticket.StartDate</td><td>@ticket.FinalDate</td>
+            <td>
+                <form method="post">
+                    <a asp-page="EditTicket" asp-route-id="@ticket.Id">Изменить</a>
+                    <button type="submit" asp-page-handler="deleteticket" asp-route-id="@ticket.Id">
+                        Удалить
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

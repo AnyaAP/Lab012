@@ -1,0 +1,40 @@
+﻿@page
+@model Lab012.Pages.CreateTicketModel
+<h2>Добавление нового билета</h2>
+<form method="post">
+    <input name="Id" value="@Model.Ticket0?.Id" type="hidden" />
+    <p>
+    <p>
+        <label>PassId:</label><br />
+        <input name="PassId" type="number" />
+    </p>
+    <p>
+        <label>TrainId:</label><br />
+        <input name="TrainId" type="number" />
+    </p>
+    <p>
+        <label>Railcar:</label><br />
+        <input name="Railcar" type="number" />
+    </p>
+    <p>
+        <label>Seat:</label><br />
+        <input name="Seat" type="number" />
+    </p>
+    <p>
+        <label>StartPlace:</label><br />
+        <input name="StartPlace" />
+    </p>
+    <p>
+        <label>FinalPlace:</label><br />
+        <input name="FinalPlace" />
+    </p>
+    <p>
+        <label>StartDate:</label><br />
+        <input name="StartDate" type="datetime-local" />
+    </p>
+    <p>
+        <label>FinalDate:</label><br />
+        <input name="FinalDate" type="datetime-local" />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>

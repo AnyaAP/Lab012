@@ -1,0 +1,40 @@
+﻿@page
+@model Lab012.Pages.EditTicketModel
+<h2>Редактирование билета</h2>
+
+<form method="post">
+    <input name="id" value="@Model.Ticket0?.Id" type="hidden" />
+    <p>
+        <label>PassId:</label><br />
+        <input name="PassId" value="@Model.Ticket0?.PassId" type="number" />
+    </p>
+    <p>
+        <label>TrainId:</label><br />
+        <input name="TrainId" value="@Model.Ticket0?.TrainId" type="number" />
+    </p>
+    <p>
+        <label>Railcar:</label><br />
+        <input name="Railcar" value="@Model.Ticket0?.Railcar" type="number" />
+    </p>
+    <p>
+        <label>Seat:</label><br />
+        <input name="Seat" value="@Model.Ticket0?.Seat" type="number" />
+    </p>
+    <p>
+        <label>StartPlace:</label><br />
+        <input name="StartPlace" value="@Model.Ticket0?.StartPlace" />
+    </p>
+    <p>
+        <label>FinalPlace:</label><br />
+        <input name="FinalPlace" value="@Model.Ticket0?.FinalPlace" />
+    </p>
+    <p>
+        <label>StartDate:</label><br />
+        <input name="StartDate" value="@Model.Ticket0?.StartDate" type="datetime-local" />
+    </p>
+    <p>
+        <label>FinalDate:</label><br />
+        <input name="FinalDate" value="@Model.Ticket0?.FinalDate" type="datetime-local" />
+    </p>
+    <input type="submit" value="Сохранить" />
+</form>
